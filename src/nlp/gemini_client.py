@@ -1,18 +1,18 @@
 from dotenv import load_dotenv
-load_dotenv()  # Load variables from .env if present
+load_dotenv()  
 
 import os
 import google.generativeai as genai
+import streamlit as st
 
-# Load API key from environment
-API_KEY = os.getenv("GEMINI_API_KEY")
+API_KEY = os.getenv("GEMINI_API_KEY") or st.secrets.get("GEMINI_API_KEY")
 if not API_KEY:
     raise ValueError("❌ GEMINI_API_KEY not set. Please set it in your .env file or as an environment variable.")
 
-# Configure Gemini SDK
+
 genai.configure(api_key=API_KEY)
 
-# Pick model (can switch to gemini-pro for better quality)
+
 MODEL_NAME = "gemini-2.0-flash-001"
 
 def generate_insights(category: str, kpis: dict, forecast_points: list):
