@@ -9,3 +9,5 @@ seaborn
 google-generativeai
 joblib
 python-dotenv
+langchain-experimental
+langchain-google-genai
