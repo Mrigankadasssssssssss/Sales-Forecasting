@@ -11,3 +11,4 @@ joblib
 python-dotenv
 langchain-experimental
 langchain-google-genai
+tabulate
