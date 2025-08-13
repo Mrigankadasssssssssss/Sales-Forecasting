@@ -1,0 +1,10 @@
+pandas
+numpy
+prophet>=1.1
+scikit-learn
+streamlit
+plotly
+matplotlib
+seaborn
+google-generativeai
+joblib
